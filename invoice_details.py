@@ -22,11 +22,12 @@ def get_invoice(invoice_text: str) -> Resume:
            strictly adhering to the following structure: {schema}.
            -Must include product name.
            -HSN/SAC is of 8 digits only. 
-           -Keep in mind: example--'72042190??.006,790 KGS'. 
-           -Here HSN: 72042190, 
-           -Rate: ??.00, 
+           -Must keep this format in mind: if ex-- '7204219089.006,790 KGS'. 
+           Then
+           -HSN: 72042190, 
+           -Rate: 89.00, 
            -Quantity: 6790 KGS.
-          -Take Customer_details from the Billing information or shipping information.
+           
            Extract details from the Invoice text: {invoice_text}"""
     ).format(
         schema=json.dumps(Resume.model_json_schema(), indent=4),
