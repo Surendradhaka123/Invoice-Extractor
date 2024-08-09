@@ -18,13 +18,13 @@ class Resume(BaseModel):
 
 def get_invoice(invoice_text: str) -> Resume:
     prompt = (
-        """You are am Invoice extractor that extracts the details from the invoice and provides output in valid JSON object,
+        """You are an Invoice extractor that extracts the details from the invoice and provides output in valid JSON object,
            strictly adhering to the following structure: {schema}.
            -Must include product name.
            -HSN/SAC is of 8 digits only. 
-           -Keep in mind: ex--'7204219097.006,790 KGS'. 
+           -Keep in mind: example--'72042190??.006,790 KGS'. 
            -Here HSN: 72042190, 
-           -Rate: 97.00, 
+           -Rate: ??.00, 
            -Quantity: 6790 KGS.
           -Take Customer_details from the Billing information or shipping information.
            Extract details from the Invoice text: {invoice_text}"""
