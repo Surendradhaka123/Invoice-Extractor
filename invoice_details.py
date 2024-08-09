@@ -20,13 +20,14 @@ def get_invoice(invoice_text: str) -> Resume:
     prompt = (
         """You are an Invoice extractor that extracts the details from the invoice and provides output in valid JSON object,
            strictly adhering to the following structure: {schema}.
-           -Must include product name.
-           -HSN/SAC is of 8 digits only. 
-           -Must keep this format in mind: if ex-- '7204219089.006,790 KGS'. 
-           Then
-           -HSN: 72042190, 
-           -Rate: 89.00, 
-           -Quantity: 6790 KGS.
+           **Guidelines**:
+           1. Must include product name.
+           2. HSN/SAC is of 8 digits only. 
+           3. If you encountered this format: ex-- '7204219089.006,790 KGS'. 
+           Then process the details as follows:
+               -HSN: 72042190, //8 digits
+               -Rate: 89.00, 
+               -Quantity: 6790 KGS.
            
            Extract details from the Invoice text: {invoice_text}"""
     ).format(
