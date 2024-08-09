@@ -25,6 +25,7 @@ def get_invoice(invoice_text: str) -> Resume:
            2. HSN/SAC is of 8 digits only. 
            3. If you encountered this format: ex-- '7204219095.006,790 KGS'. 
                Then, process the details as follows:
+                    72042190\n95.00\n6,790 KGS
                    -HSN: 72042190, //8 digits
                    -Rate: 95.00, //digits after HSN
                    -Quantity: 6790 KGS.
