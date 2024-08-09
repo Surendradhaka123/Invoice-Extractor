@@ -3,10 +3,6 @@ from invoice_details import get_invoice
 from utils import read_pdf, read_word_docx2txt, read_word_doc, read_txt
 import easyocr
 import streamlit as st
-import pytesseract
-
-# Specify the path to the Tesseract executable if necessary
-pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'
 
 
 reader = easyocr.Reader(['en'])
