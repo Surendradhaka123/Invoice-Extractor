@@ -23,11 +23,11 @@ def get_invoice(invoice_text: str) -> Resume:
            **Guidelines**:
            1. Must include product name.
            2. HSN/SAC is of 8 digits only. 
-           3. If you encountered this format: ex-- '7204219089.006,790 KGS'. 
+           3. If you encountered this format: ex-- '7204219095.006,790 KGS'. 
                Then, process the details as follows:
                    -HSN: 72042190, //8 digits
-                   -Rate: 89.00, //digits after HSN
-                   -Quantity: 6790 KGS. 
+                   -Rate: 95.00, //digits after HSN
+                   -Quantity: 6790 KGS.
            
            Extract details from the Invoice text: {invoice_text}"""
     ).format(
