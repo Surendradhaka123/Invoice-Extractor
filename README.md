@@ -19,7 +19,7 @@ The **Invoice Extraction App** is a Streamlit-based application that processes v
 - **File Handling**: Supports PDF, DOCX, TXT, and image files (PNG, JPEG, JPG).
 
 ## Live Demo
-You can access the live Streamlit app here[https://invoice-extractor-hgkrz4zvsebeeuv9gtgbnk.streamlit.app].
+You can access the live Streamlit app [here](https://invoice-extractor-hgkrz4zvsebeeuv9gtgbnk.streamlit.app).
 
 ## Installation
 
